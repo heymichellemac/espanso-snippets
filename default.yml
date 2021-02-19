@@ -1,0 +1,36 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+
+  # Shrug..
+  - trigger: ":shrug"
+    replace: '¯\_(ツ)_/¯'
+
+  # Mishacreatrix
+  - trigger: ":mx"
+    replace: "https://mishacreatrix.com/"
+
+  # Mishacreatrix Pink Hex Value
+  - trigger: ":mpink"
+    replace: "#DB1F5F"
+
+  # Obsidian evergreen note template
+  - trigger: ":evergreen"
+    replace: "Tags: #evergreen
+            \nTopics:
+            \nSource:"
+
+  # Date - good for obsidian note naming
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        params:
+          format: "%Y%m%d"
+
