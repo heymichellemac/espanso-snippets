@@ -12,6 +12,10 @@ matches:
   - trigger: ":shrug"
     replace: '¯\_(ツ)_/¯'
 
+  # Euro Symbol - why you no exist on my keyboard?!
+  - trigger: ":euro"
+    replace: "€"
+
   # Mishacreatrix
   - trigger: ":mx"
     replace: "https://mishacreatrix.com/"
