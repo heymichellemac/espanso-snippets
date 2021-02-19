@@ -1,2 +1,2 @@
 # espanso-snippets
- Some of my most used Espanso snippets
+ Some of my Espanso snippets
