@@ -24,17 +24,29 @@ matches:
   - trigger: ":mpink"
     replace: "#DB1F5F"
 
-  # Obsidian evergreen note template
-  - trigger: ":evergreen"
-    replace: "Tags: #evergreen
-            \nTopics:
-            \nSource:"
+  # Twitter
+  - trigger: ":twitter"
+    replace: "https://twitter.com/MishaCreatrix"
 
-  # Date - good for obsidian note naming
+  # Bullet point (for Tweets)
+  - trigger: ":bull"
+    replace: '•'
+
+  # Date
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
       - name: mydate
+        type: date
         params:
           format: "%Y%m%d"
+
+  # Time
+  - trigger: ":time"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
 
