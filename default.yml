@@ -2,37 +2,42 @@
 
 # This is the default configuration file, change it as you like it
 # You can refer to the official documentation:
-# https://espanso.org/docs/
+# https://espanso:date
 
-# Matches are the substitution rules, when you type the "trigger" string
-# it gets replaced by the "replace" string.
 matches:
-
-  # Shrug..
-  - trigger: ":shrug"
-    replace: '¯\_(ツ)_/¯'
-
-  # Euro Symbol - why you no exist on my keyboard?!
+  # Symbols
+  - trigger: "->"
+    replace: " ➜"
   - trigger: ":euro"
     replace: "€"
-
-  # Mishacreatrix
-  - trigger: ":mx"
-    replace: "https://mishacreatrix.com/"
-
-  # Mishacreatrix Pink Hex Value
-  - trigger: ":mpink"
-    replace: "#DB1F5F"
-
-  # Twitter
-  - trigger: ":twitter"
-    replace: "https://twitter.com/MishaCreatrix"
-
-  # Bullet point (for Tweets)
   - trigger: ":bull"
-    replace: '•'
+    replace: "•"
+  - trigger: ":gc"
+    replace: "🟢"
+  - trigger: ":pipe"
+    replace: "|"
+  - trigger: ":oc"
+    replace: "🟠"
+  - trigger: ":wc"
+    replace: "⚪"
+  - trigger: ":cluster"
+    replace: "❇️"
 
-  # Date
+  # Code Snippets
+  - trigger: ":ext"
+    replace: '{:target="_blank"}{:rel="noopener noreferrer"}'
+  - trigger: ":sc"
+    replace: "?utm_source=DesignInsightNewsletter"
+
+  # Links
+  - trigger: ":twit"
+    replace: "https://twitter.com/heymichellemac"
+  - trigger: ":mx"
+    replace: "https://heymichellemac.com/"
+  - trigger: ":mas"
+    replace: "https://pkm.social/@heymichellemac"
+
+  # Dates
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
@@ -41,7 +46,6 @@ matches:
         params:
           format: "%Y%m%d"
 
-  # Time
   - trigger: ":time"
     replace: "{{mytime}}"
     vars:
@@ -50,3 +54,20 @@ matches:
         params:
           format: "%H:%M"
 
+  # Dates
+  - trigger: ":ldate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
